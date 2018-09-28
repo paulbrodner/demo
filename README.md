@@ -26,3 +26,10 @@ $ jx get applications
 ```shell
 $ jx promote --version <version> --env production --timeout 1h
 ```
+
+* find-out url from differed environments:
+
+```shell
+$ jx open --env <environment>
+$ jx open --env staging
+```
