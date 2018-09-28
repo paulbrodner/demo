@@ -3,7 +3,7 @@ pipeline {
       label "jenkins-maven"
     }
     environment {
-      ORG               = 'paulbrodner'
+      ORG               = 'alfresco'
       APP_NAME          = 'demo'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
