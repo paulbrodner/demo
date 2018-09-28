@@ -33,3 +33,10 @@ $ jx promote --version <version> --env production --timeout 1h
 $ jx open --env <environment>
 $ jx open --env staging
 ```
+* export secrets and copy to other namespace
+
+```shell
+kubectl get secret gitlab-registry --namespace=source-ns --export -o yaml |\
+kubectl apply --namespace=destination-ns -f -
+```
+
