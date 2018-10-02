@@ -16,7 +16,8 @@ spec:
       annotations:
 {{ toYaml .Values.podAnnotations | indent 8 }}
 {{- end }}
-    spec:      
+    spec:
+      imagePullSecrets: "quay-registry-secret"     
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
