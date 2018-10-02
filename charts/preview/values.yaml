@@ -19,5 +19,4 @@ preview:
   image:
     repository:
     tag:
-    pullPolicy: IfNotPresent
-    pullSecrets: jenkins-docker-cfg
+    pullPolicy: IfNotPresent    

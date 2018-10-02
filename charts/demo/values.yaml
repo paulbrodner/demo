@@ -5,8 +5,7 @@ replicaCount: 1
 image:
   repository: draft
   tag: dev
-  pullPolicy: IfNotPresent
-  pullSecrets: jenkins-docker-cfg
+  pullPolicy: IfNotPresent  
 service:
   name: demo
   type: ClusterIP
