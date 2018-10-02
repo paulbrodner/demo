@@ -16,12 +16,11 @@ spec:
       annotations:
 {{ toYaml .Values.podAnnotations | indent 8 }}
 {{- end }}
-    spec:
+    spec:      
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
-        imagePullSecrets: {{ .Values.image.pullSecrets | quote }}         
+        imagePullPolicy: {{ .Values.image.pullPolicy }}        
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
